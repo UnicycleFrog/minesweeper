@@ -354,6 +354,7 @@ public class MineGUI extends JFrame implements ActionListener{
 		panel.repaint();
 	}
 	private void clearGame() {
+		setFace(0);
 		panel.removeAll();
 		repaint();
 		buts.clear();
