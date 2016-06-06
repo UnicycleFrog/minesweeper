@@ -161,7 +161,7 @@ public class MineGUI extends JFrame implements ActionListener{
 		time.start();
 	}
 	private static void setTime() {
-		int h = watch/100, t = watch/10, o = watch % 10;
+		int h = watch/100, t = (watch%100)/10, o = watch % 10;
 		try {
 			timehuns = ImageIO.read(new File("src/minesweeper/images/time"+ h + ".gif"));
 			timetens = ImageIO.read(new File("src/minesweeper/images/time"+ t + ".gif"));
