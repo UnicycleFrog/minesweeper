@@ -125,13 +125,14 @@ public class Button extends Spot implements ActionListener, MouseListener{
 	public void mouseReleased(MouseEvent e) {
 		 butt.getModel().setArmed(false);
          butt.getModel().setPressed(false);
-         MineGUI.setFace(0);
              if (SwingUtilities.isRightMouseButton(e)) {
              	if(getState() == 3) {
+             		         MineGUI.setFace(0);
              		setState(0);
              		MineGUI.decreaseFlags();
              	}
              	else if (getState() == 0 && MineGUI.getFlags() > 0) {
+             		MineGUI.setFace(0);
                  setState(3);
                  MineGUI.increaseFlags();
              	}
